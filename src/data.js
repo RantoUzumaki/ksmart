@@ -124,3 +124,88 @@ export const zonalOffice = [
     localBodyId: 1,
   },
 ];
+
+export const wardId = [
+  {
+    id: 1,
+    value: "Ward 1",
+    zonalOfficeId: 1,
+  },
+  {
+    id: 2,
+    value: "Ward 2",
+    zonalOfficeId: 1,
+  },
+  {
+    id: 3,
+    value: "Ward 3",
+    zonalOfficeId: 1,
+  },
+  {
+    id: 4,
+    value: "Ward 4",
+    zonalOfficeId: 2,
+  },
+  {
+    id: 5,
+    value: "Ward 5",
+    zonalOfficeId: 2,
+  },
+  {
+    id: 6,
+    value: "Ward 6",
+    zonalOfficeId: 2,
+  },
+  {
+    id: 7,
+    value: "Ward 7",
+    zonalOfficeId: 3,
+  },
+  {
+    id: 8,
+    value: "Ward 8",
+    zonalOfficeId: 3,
+  },
+  {
+    id: 9,
+    value: "Ward 9",
+    zonalOfficeId: 3,
+  },
+];
+
+export const occupancyNature = [
+  {
+    id: 1,
+    value: "Residential",
+  },
+  {
+    id: 2,
+    value: "Office",
+  },
+  {
+    id: 3,
+    value: "Commercial",
+  },
+  {
+    id: 4,
+    value: "Schools",
+  },
+];
+
+export const villageMaster = [
+  {
+    id: 1,
+    value: "Village 1",
+    localBodyId: 1,
+  },
+  {
+    id: 2,
+    value: "Village 2",
+    localBodyId: 1,
+  },
+  {
+    id: 3,
+    value: "Village 3",
+    localBodyId: 1,
+  },
+];

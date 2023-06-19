@@ -28,7 +28,7 @@ const Dropdown = ({ label, options = [] }) => {
               key={id}
               onClick={() => {
                 setIsSelected(value);
-                setIsActive(!isActive);
+                setIsActive(false);
               }}
               className="item"
             >

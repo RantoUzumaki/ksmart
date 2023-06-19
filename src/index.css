@@ -416,3 +416,34 @@ body {
   outline: none;
 }
 /* Input Ends here... */
+
+/* Buttons starts here... */
+.action {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 18px;
+}
+
+.action button {
+  width: max-content;
+  height: max-content;
+  padding: 18px 40px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 30px 4px;
+  outline: none;
+  border-color: var(--cta-color);
+  box-shadow: 0px 20px 10px -10px var(--cta-color);
+}
+
+.action button.inverted {
+  color: var(--cta-color);
+  background-color: var(--white-color);
+}
+
+.action button.primary {
+  color: var(--white-color);
+  background-color: var(--cta-color);
+}
+/* Buttons ends here... */
