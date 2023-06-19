@@ -1,0 +1,418 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --dark-blue: #09327b;
+  --background: #e7eff5;
+  --icon-color: #acb6bd;
+  --teal-green: #00b2ec;
+  --black-color: #333333;
+  --white-color: #ffffff;
+  --cta-color: #e84e8d;
+  --gray-text: #6b7b98;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--background);
+}
+
+/* Header Starts here... */
+.header-container {
+  width: 100%;
+  height: 70px;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white-color);
+}
+
+.header-container .header-left {
+  display: flex;
+  width: 400px;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container .header-left .logo-text {
+  font-size: 28px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+.header-container .header-left button {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.header-container .header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.header-container .header-right button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 4px;
+  margin: 0;
+  background-color: var(--background);
+  color: var(--icon-color);
+}
+
+.header-container .header-right button img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: contain;
+}
+/* Header Ends here... */
+
+/* Breadcrum Starts here... */
+.breadcrum-container {
+  width: 100%;
+  height: 45px;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-blue);
+  font-weight: 600;
+  color: var(--gray-text);
+}
+
+.breadcrum-container .breadcrum-left,
+.breadcrum-container .breadcrum-right {
+  font-size: 14px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrum-container .breadcrum-left svg {
+  font-size: 20px;
+  margin-right: 6px;
+}
+
+.breadcrum-container .breadcrum-left .slash {
+  padding: 0 8px;
+}
+
+.breadcrum-container .breadcrum-left .active {
+  color: var(--teal-green);
+}
+
+.breadcrum-container .breadcrum-right svg {
+  margin: 0 6px;
+}
+/* Breadcrum Ends here... */
+
+.container {
+  width: 100vw;
+  height: calc(100vh - 70px - 45px);
+  display: flex;
+}
+
+/* Sidemenu starts here... */
+.sidemenu-wrapper {
+  width: 380px;
+  height: 100%;
+  padding: 24px 0 24px 30px;
+}
+
+.sidemenu-accordion {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 30px;
+  background-color: var(--teal-green);
+  color: var(--white-color);
+  border-radius: 8px;
+  padding: 0 30px 30px;
+}
+
+.sidemenu-accordion .header {
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sidemenu-accordion .content {
+  display: none;
+}
+
+.sidemenu-accordion.active {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  box-shadow: 0px 25px 0px -10px rgba(207, 224, 245, 1);
+}
+
+.sidemenu-accordion.active {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border-radius: 40px 8px;
+  height: max-content;
+}
+
+.sidemenu-accordion.active .header svg {
+  color: var(--teal-green);
+}
+
+.sidemenu-accordion.active .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidemenu-accordion .content .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--black-color);
+  opacity: 0.7;
+  font-size: 16px;
+  padding: 8px 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sidemenu-accordion .content .list:hover,
+.sidemenu-accordion .content .list.active {
+  color: var(--dark-blue);
+  opacity: 1;
+}
+
+.sidemenu-accordion .content .list.active::after {
+  content: "\2713";
+  width: 20px;
+  height: 20px;
+  background-color: var(--teal-green);
+  border-radius: 99px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: var(--white-color);
+}
+/* Sidemenu Ends here... */
+
+/* Content Starts here... */
+.content-wrapper {
+  width: calc(100% - 380px);
+  height: 100%;
+  overflow: hidden auto;
+  padding: 24px;
+}
+
+.content-wrapper .form-head {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.content-wrapper .form-head p {
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  font-size: 28px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.content-wrapper .form-head::before,
+.content-wrapper .form-head::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--dark-blue);
+}
+
+.accordian-content {
+  width: 80%;
+  margin: 0 auto;
+  padding: 18px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* Content Ends here... */
+
+/* Accordion Starts here... */
+.accordion-wrapper {
+  width: 100%;
+  background-color: var(--white-color);
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.accordion-wrapper.active {
+  padding: 18px 0;
+  box-shadow: 0px 0px 10px 2px var(--icon-color);
+}
+
+.accordion-wrapper .accordion-head {
+  display: flex;
+  height: 60px;
+  padding: 0 30px 0 18px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordion-wrapper .accordion-head span {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-blue);
+  padding: 12px 24px;
+}
+
+.accordion-wrapper.active .accordion-head {
+  border-bottom: 1px solid var(--icon-color);
+  padding-bottom: 18px;
+}
+
+.accordion-wrapper.active .accordion-head span {
+  background-color: var(--teal-green);
+  color: var(--white-color);
+}
+
+.accordion-wrapper .accordion-body {
+  display: none;
+}
+
+.accordion-wrapper.active .accordion-body {
+  display: block;
+  padding: 18px;
+}
+/* Accordion Ends here... */
+
+/* Dropdown Starts here... */
+.dropdown-wrapper {
+  width: 300px;
+  position: relative;
+}
+
+.dropdown-wrapper label {
+  position: absolute;
+  top: -10px;
+  background-color: var(--white-color);
+  padding: 0 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--dark-blue);
+  z-index: 99;
+  left: 10px;
+}
+
+.dropdown {
+  height: 45px;
+  width: 300px;
+  position: relative;
+}
+
+.dropdown .dropdown-btn {
+  height: 45px;
+  cursor: pointer;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #777;
+  font-weight: 500;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #fff;
+  min-height: max-content;
+  max-height: 250px;
+  overflow: auto;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.07);
+}
+
+.dropdown-content .item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-content .item:hover {
+  background: #fcfcfc;
+}
+/* Dropdown Ends here... */
+
+/* Input Starts here... */
+.input-wrapper {
+  width: 300px;
+  position: relative;
+}
+
+.input-wrapper label {
+  position: absolute;
+  top: -10px;
+  background-color: var(--white-color);
+  padding: 0 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--dark-blue);
+  z-index: 99;
+  left: 10px;
+}
+
+.input-wrapper input {
+  height: 45px;
+  width: 300px;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #777;
+  font-weight: 500;
+}
+
+.input-wrapper input:focus,
+.input-wrapper input:hover {
+  border: 1px solid var(--dark-blue);
+  outline: none;
+}
+/* Input Ends here... */
